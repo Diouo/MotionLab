@@ -13,6 +13,8 @@ An anonymous preliminary code of MotionLab, whose core is in ./rfmotion/models/m
 - [2025/01/23] release evaluating code
 - [2025/02/01] release codes of specialist models
 - [2025/02/03] release checkpoints
+- [2025/02/04] 🔥🔥 better performance was achieved by modifying CFG parameters
+
 ## Folder Structure
 ```
 ├── checkpoints
