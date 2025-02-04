@@ -1,0 +1,7 @@
+text_encoder:
+  target: rfmotion.models.architectures.rfmotion_clip.RFMotionTextEncoder
+  params:
+    finetune: false 
+    last_hidden_state: true
+    modelpath: ${model.clip_path}
+    max_length: 77

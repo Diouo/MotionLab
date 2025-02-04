@@ -1,0 +1,62 @@
+activation: gelu
+archiname: transformer
+batch_size: 128
+clip_image_losses:
+- cosine
+clip_lambda_ce: 1.0
+clip_lambda_cosine: 1.0
+clip_lambda_mse: 1.0
+clip_lambdas:
+  image:
+    cosine: 1.0
+  text:
+    cosine: 1.0
+clip_layers: 12
+clip_text_losses:
+- cosine
+clip_training: ''
+cuda: true
+datapath: ./data/amass_xyz_911_feats_notrans/amass_30fps_db.pt
+dataset: amass
+debug: false
+device: 3
+expname: exps
+folder: ./exps/9_15_feat_mld_vae_l1loss
+glob: true
+glob_rot:
+- 3.141592653589793
+- 0
+- 0
+jointstype: vertices
+lambda_rc: 100.0
+lambda_rcxyz: 100.0
+lambda_vel: 1.0
+lambda_velxyz: 1.0
+lambdas:
+  rc: 100.0
+  rcxyz: 100.0
+latent_dim: 512
+losses:
+- rc
+- rcxyz
+lr: 0.0001
+max_len: -1
+min_len: -1
+modelname: motionclip_transformer_rc_rcxyz
+modeltype: motionclip
+num_epochs: 500
+num_frames: 60
+num_layers: 9
+num_seq_max: -1
+only_60_classes: false
+pose_rep: feats
+sampling: conseq
+sampling_step: 1
+snapshot: 20
+translation: true
+use_action_cat_as_text_labels: false
+use_only_15_classes: false
+vertstrans: false
+nfeats: 1
+njoints: 263
+num_classes: 1

@@ -1,0 +1,50 @@
+FOLDER: './experiments'
+
+TEST:
+  FOLDER: './results'
+
+DATASET:
+  SMPL_PATH: './checkpoints/smpl/'
+  SMPLH_PATH: './checkpoints/smplh/'
+  WORD_VERTILIZER_PATH: './checkpoints/glove/'
+  HUMANML3D:
+    ROOT: './datasets/humanml3d/'
+    SPLIT_ROOT: './datasets/humanml3d/'
+  100STYLE:
+    ROOT: './datasets/100style/'
+    SPLIT_ROOT: './datasets/100style/'
+  HUMANML3D_100STYLE:
+    ROOT: './datasets/humanml3d_100style/'
+    SPLIT_ROOT: './datasets/humanml3d_100style/'
+  ALL:
+    ROOT: './datasets/all/'
+    SPLIT_ROOT: './datasets/all/'
+  MOTIONFIX_RETARGET:
+    ROOT: './datasets/motionfix_retarget/' 
+    SPLIT_ROOT: './datasets/motionfix_retarget/' 
+  MOTIONFIX:
+    ROOT: './datasets/motionfix/'
+    preproc:
+      stats_file: './datasets/motionfix/statistics_motionfix_feat3.npy' 
+      split_seed: 0
+      calculate_minmax: True
+      generate_joint_files: True
+      use_cuda: True
+      n_body_joints: 22
+      norm_type: std # norm or std
+    load_feats:
+        - "body_transl"
+        - "body_orient"
+        - "body_pose"
+        # - "body_transl_delta_pelv"
+        # - "body_orient_xy"
+        # - "z_orient_delta"
+        # - "body_pose"
+        # - "body_joints_local_wo_z_rot"
+
+model:
+  clip_path: './checkpoints/clip-vit-large-patch14' 
+  t5_path: './checkpoints/flan-t5-large'
+  t2m_path: './checkpoints/t2m/'
+  TMR_path: './checkpoints/TMR/'
+  style_encoder_path: './checkpoints/smoodi/style_encoder.pt'

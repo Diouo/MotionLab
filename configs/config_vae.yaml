@@ -1,0 +1,102 @@
+NAME: baseline_Feat4_Divide8-256_NativeROPE # Experiment name
+DEBUG: False # Debug mode
+ACCELERATOR: 'gpu' # Devices optioncal: “cpu”, “gpu”, “tpu”, “ipu”, “hpu”, “mps, “auto”
+DEVICE: [0] # Index of gpus eg. [0] or [0,1,2,3]
+
+# Training configuration
+TRAIN:
+  #---------------------------------
+  STAGE: vae # stage "vae" or "diffusion", "vae_diffusion"
+  #---------------------------------
+  DATASETS: ['motionfix'] # Training datasets
+  NUM_WORKERS: 8 # Number of workers
+  BATCH_SIZE: 128 # 128 # Size of batches
+  START_EPOCH: 0 # Start epoch
+  END_EPOCH: 4000 # End epoch
+  RESUME: '' # Resume training from this path
+  PRETRAINED_VAE: ''
+  OPTIM:
+    TYPE: AdamW # Optimizer type
+    LR: 1e-4 # Learning rate
+
+  ABLATION:
+    VAE: True
+    VAE_PE_TYPE: "rope"
+    VAE_PE_DIM: "1D"
+
+    RF_PE_TYPE: "sine"
+    RF_PE_DIM: "1D"
+    RF_TIMEEMBED: "time" # "time_text"
+    RF_SEP: False
+    LN_Sampling: False
+    WARM_UP: False
+    HINT_GUIDANCE: False
+
+# Model Configuration
+model:
+  model_type: "vae"
+  latent_dim: [8, 256]
+
+  mixing_scale: 1
+  guidance_type: 'source_text'
+
+  ## For SourceText
+  text_guidance_scale: 2 
+  text_guidance_prob: 0.85 
+  source_guidance_scale: 2
+  source_guidance_prob: 0.075
+  none_guidance_prob: 0.075
+
+  all_guidance_scale: 1.0
+  all_guidance_prob: 0.7
+  hint_guidance_scale: 2
+  hint_guidance_prob: 0.1
+
+  # ## For SourceHint
+  # all_guidance_scale: 1.0
+  # all_guidance_prob: 0.7
+  # hint_guidance_scale: 2
+  # hint_guidance_prob: 0.1
+  # source_guidance_scale: 2
+  # source_guidance_prob: 0.1
+  # none_guidance_prob: 0.1
+
+  # text_guidance_scale: 2 
+  # text_guidance_prob: 0.85 
+
+# Evaluating Configuration
+EVAL:
+  DATASETS: ['motionfix'] # Evaluating datasets
+  BATCH_SIZE: 32 # 32 # Evaluating Batch size
+  SPLIT: test
+
+# Test Configuration
+TEST:
+  CHECKPOINTS: '' # Pretrained model path
+  DATASETS: ['motionfix'] # training datasets
+  SPLIT: test
+  BATCH_SIZE: 32 # 32 # training Batch size
+  MEAN: False
+  NUM_SAMPLES: 1
+  FACT: 1
+
+# Metric Configuration
+METRIC:
+  TYPE: ['MRMetrics','UncondMetrics']  # TYPE: ['MRMetrics','UncondMetrics'] # TYPE: ['MRMetrics'] 
+
+# Losses Configuration
+LOSS:
+  LAMBDA_LATENT: 1.0e-5 # Lambda for latent Losses
+  LAMBDA_KL: 1.0e-4 # Lambda for kl Losses
+  LAMBDA_REC: 1.0 # Lambda for reconstruction Losses
+  LAMBDA_GEN: 1.0 # Lambda for text-motion generation losses
+  LAMBDA_CROSS: 1.0 # Lambda for reconstruction Losses
+  LAMBDA_CYCLE: 0.0 # Lambda for cycle Losses
+  LAMBDA_PRIOR: 0.0
+  DIST_SYNC_ON_STEP: False # Sync Losses on step when distributed trained
+
+# Logger configuration
+LOGGER:
+  SAVE_CHECKPOINT_EPOCH: 50
+  CHECK_VAL_EVERY_N_EPOCH: 5
+  TENSORBOARD: True

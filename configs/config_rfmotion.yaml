@@ -1,0 +1,137 @@
+####################################
+# The following are general settings
+####################################
+
+# Experiment name, more details in Section 'Experiment Name Explanation'
+NAME: baseline
+# 1. use a tiny dataset for trianing and evaluation
+# 2. validate more intensively
+# 3. will not use `wandb logger`
+DEBUG: False
+# Devices. Optional: “cpu”, “gpu”
+ACCELERATOR: 'gpu'
+# Index of GPUs eg. [0] or [0,1,2,3]
+DEVICE: [0]
+
+#####################################
+# The following are training settings
+#####################################
+TRAIN:
+  # Model stage. Optional: "vae", "diffusion"
+  STAGE: diffusion
+  # Training dataset name
+  DATASETS: ['all'] 
+  # Number of dataloader workers
+  NUM_WORKERS: 8
+  # Size of batches
+  BATCH_SIZE: 64
+  # Total epochs for training
+  END_EPOCH: 8000
+
+  RESUME: '' # Resume training from this path
+  PRETRAINED_VAE: '' # vae model path
+  OPTIM:
+    TYPE: AdamW # Optimizer type
+    LR: 1e-4 # Learning rate
+  # Ablation study configurations.
+  ABLATION:
+    VAE: False
+    VAE_PE_TYPE: "sine"
+    VAE_PE_DIM: "1D"
+    VAE_LATENT_NUMS: 8
+
+    RF_SEP: False
+    LN_Sampling: False
+    WARM_UP: False
+    HINT_GUIDANCE: False
+
+#####################################
+# The following are basic model settings
+#####################################
+model:
+  model_type: 'rfmotion'
+  condition_type: 'all'
+  token_dim: 512
+
+  # ## For All
+  text_guidance_scale: 5.75
+  hint_guidance_scale: 1.5
+  text_hint_guidance_scale: 1.75
+  inbetween_guidance_scale: 1.5
+  text_inbetween_guidance_scale: 1.75
+  source_text_guidance_scale_1: 2.25
+  source_text_guidance_scale_2: 2.25
+  source_hint_guidance_scale_1: 2.25  
+  source_hint_guidance_scale_2: 2.25
+  source_text_hint_guidance_scale_1: 2
+  source_text_hint_guidance_scale_2: 2
+  style_guidance_scale: 1.5
+  drop_style_guidance_prob: 0.2
+  drop_content_guidance_prob: 0.2
+  
+#####################################
+# The following are validation settings
+#####################################
+EVAL:
+  DATASETS: ['all'] # Evaluating datasets
+  BATCH_SIZE: 32 # Evaluating Batch size
+  SPLIT: test
+
+#####################################
+# The following are testing settings
+#####################################
+TEST:
+  CHECKPOINTS: ""  # Pretrained model path
+  DATASETS: ['all']
+  SPLIT: test
+  BATCH_SIZE: 32
+  MEAN: False
+  NUM_SAMPLES: 1
+  FACT: 1
+
+#####################################
+# The following are demo settings
+#####################################
+DEMO:
+  TYPE: ""
+  CHECKPOINTS: ""  # Pretrained model path
+  DATASETS: ['all']
+  SPLIT: test
+  BATCH_SIZE: 1
+  MEAN: False
+  NUM_SAMPLES: 1
+  FACT: 1
+  SAMPLE_NUMS: 10
+  REPLICATION: 1
+
+#####################################
+# The following are metric settings
+#####################################
+METRIC:
+  TYPE: ["MaskedMetrics", "TM2TMetrics", "SourceTextMetrics", "SourceHintMetrics", "SourceTextHintMetrics", "InbetweenMetrics", "TextInbetweenMetrics","TextHintMetrics", "HintMetrics", "StyleMetrics", ]
+
+#####################################
+# The following are training losses settings
+#####################################
+LOSS:
+  TYPE: mld # Losses type
+  LAMBDA_LATENT: 1.0e-5 # Lambda for latent Losses
+  LAMBDA_KL: 1.0e-4 # Lambda for kl Losses
+  LAMBDA_REC: 1.0 # Lambda for reconstruction Losses
+  LAMBDA_GEN: 1.0 # Lambda for text-motion generation losses
+  LAMBDA_CROSS: 1.0 # Lambda for reconstruction Losses
+  LAMBDA_CYCLE: 0.0 # Lambda for cycle Losses
+  LAMBDA_PRIOR: 0.0
+  DIST_SYNC_ON_STEP: False # Sync Losses on step when distributed trained
+
+#####################################
+# The following are loggers settings
+#####################################
+LOGGER:
+  SAVE_CHECKPOINT_EPOCH: 50
+  CHECK_VAL_EVERY_N_EPOCH: 25
+  TENSORBOARD: True
+  WANDB:
+    PROJECT: null
+    OFFLINE: False
+    RESUME_ID: null

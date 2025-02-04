@@ -1,0 +1,18 @@
+denoiser:
+  target: rfmotion.models.architectures.rfmotion_denoiser_4path.RFMotionDenoiser # rfmotion_denoiser.RFMotionDenoiser
+  params:
+    text_encoded_dim: 768
+    ff_size: 1024
+    num_layers: 9
+    num_heads: 8
+    dropout: 0.1
+    normalize_before: False
+    activation: 'gelu'
+    flip_sin_to_cos: True
+    return_intermediate_dec: False
+    arch: trans_enc
+    freq_shift: 0
+    token_dim: ${model.token_dim}
+    nfeats: ${DATASET.NFEATS}
+    nclasses: ${DATASET.NCLASSES}
+    ablation: ${TRAIN.ABLATION}
