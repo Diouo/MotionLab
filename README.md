@@ -3,7 +3,7 @@
 <p align="left">
     <a href='https://arxiv.org/abs/2502.02358'><img src='https://img.shields.io/badge/arxiv-red' alt='youtube video'></a>
     <a href='https://www.youtube.com/watch?v=X5yFMSJLNcE'><img src='https://img.shields.io/badge/video-video-purple' alt='youtube video'></a>
-    <a href='https://motionlab-anonymous.github.io/motionlab.github.io/'><img src='https://img.shields.io/badge/project-project-blue' alt='project page'></a>
+    <a href='https://diouo.github.io/motionlab.github.io/'><img src='https://img.shields.io/badge/project-project-blue' alt='project page'></a>
 </p>
 
 An anonymous preliminary code of MotionLab, whose core is in ./rfmotion/models/modeltype/rfmotion.py.
