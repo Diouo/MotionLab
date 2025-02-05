@@ -1,6 +1,7 @@
 # MotionLab: Unified Human Motion Generation and Editing via the Motion-Condition-Motion Paradigm
 
 <p align="left">
+    <a href='https://arxiv.org/abs/2502.02358'><img src='https://img.shields.io/badge/arxiv-red' alt='youtube video'></a>
     <a href='https://www.youtube.com/watch?v=X5yFMSJLNcE'><img src='https://img.shields.io/badge/video-video-purple' alt='youtube video'></a>
     <a href='https://motionlab-anonymous.github.io/motionlab.github.io/'><img src='https://img.shields.io/badge/project-project-blue' alt='project page'></a>
 </p>
