@@ -68,9 +68,9 @@ python: 3.9.20; torch: 2.1.1; pytorch-lightning: 1.9.4; cuda: 11.8.0;
 ```
 conda create python=3.9 --name rfmotion
 conda activate rfmotion
+conda install pytorch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 pytorch-cuda=11.8 -c pytorch -c nvidia
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
-pip install git+https://github.com/openai/CLIP.git
 ```
 
 ### 2. Download Dependencies:
