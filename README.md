@@ -33,8 +33,12 @@ Ours-in paper | 0.223 | 0.0334 | 56.34 | 72.65 | 0.0273 | 64.97 | 47.86
 │   │   ├── motion_encoder.ckpt
 │   │   ├── motionclip.pth.tar
 │   ├── smpl
+│   │   ├── J_regressor_extra.npy
+│   │   ├── smplfaces.npy
+│   │   ├── kintree_table.pkl
 │   │   ├── SMPL_NEUTRAL.pkl
 │   ├── smplh
+│   │   ├── smplh.faces
 │   │   ├── SMPLH_NEUTRAL.npz
 │   ├── t2m
 │   │   ├── Comp_v6_KLD01
