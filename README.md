@@ -81,6 +81,7 @@ python -m spacy download en_core_web_sm
 The results should be placed as shown in Folder Structure, including glove,t2m, smpl and clip.
 ```
 bash prepare/download_smpl_model.sh
+bash prepare/download_smpl_file.sh
 bash prepare/download_glove.sh
 bash prepare/download_t2m_evaluators.sh
 bash prepare/download_clip.sh
