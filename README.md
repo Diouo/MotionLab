@@ -78,7 +78,7 @@ python -m spacy download en_core_web_sm
 ```
 
 ### 2. Download Dependencies:
-The results should be placed as shown in Folder Structure, including glove,t2m, smpl and clip.
+The results should be placed as shown in Folder Structure, including glove, t2m, smpl and clip.
 ```
 bash prepare/download_smpl_model.sh
 bash prepare/download_smpl_file.sh
