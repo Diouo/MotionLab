@@ -59,6 +59,9 @@ Ours-in paper | 0.223 | 0.0334 | 56.34 | 72.65 | 0.0273 | 64.97 | 47.86
 │   │   ├── val_motionfix.txt
 │   │   ├── test_humanml.txt
 │   │   ├── test_motionfix.txt
+│   ├── mcm-ldm
+│   │   ├── content_test_feats
+│   │   ├── style_test_feats
 ├── experiments
 │   ├── rfmotion
 │   │   ├── SPECIFIED NAME OF EXPERIMENTS
