@@ -14,7 +14,7 @@ An preliminary code of MotionLab, whose core is in ./rfmotion/models/modeltype/r
 - [2025/01/23] release evaluating code
 - [2025/02/01] release codes of specialist models
 - [2025/02/03] release checkpoints
-- [2025/02/04] 🔥🔥 Our unified model outperforms the specialist models in all metrics by modifying the CFG parameters
+- [2025/02/04] 🔥🔥 Our unified model outperforms the specialist models on all task metrics by modifying the CFG parameters
 
 Method | text gen. (FID) | traj. gen. (avg. err.) | text edit (R@1) | traj. edit (R@1) | in-between (avg. err.) | style transfer (SRA) | style transfer (CRA)
 -------- | ----- | -----| -----| -----| -----| -----| -----
