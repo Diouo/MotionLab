@@ -146,11 +146,11 @@ Some codes are borrowed from [MLD](https://github.com/ChenFengYe/motion-latent-d
 ## Citation
 If you find MotionLab useful for your work please cite:
 ```
-@article{       ,
-  author    = {},
-  title     = {MotionLab: Unified Human Motion Generation and Editing via the Motion-Condition-Motion Paradigm},
-  journal   = {},
-  year      = {2025},
+@article{guo2025motionlab,
+  title={MotionLab: Unified Human Motion Generation and Editing via the Motion-Condition-Motion Paradigm},
+  author={Guo, Ziyan and Hu, Zeyu and Zhao, Na and Soh, De Wen},
+  journal={arXiv preprint arXiv:2502.02358},
+  year={2025}
 }
 ```
 
