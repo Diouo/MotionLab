@@ -6,7 +6,7 @@
     <a href='https://diouo.github.io/motionlab.github.io/'><img src='https://img.shields.io/badge/project-project-blue' alt='project page'></a>
 </p>
 
-An preliminary code of MotionLab, whose core is in ./rfmotion/models/modeltype/rfmotion.py.
+The official code of MotionLab, whose core lies in ./rfmotion/models/modeltype/rfmotion.py.
 
 ## News
 - [2025/01/23] release demo code
