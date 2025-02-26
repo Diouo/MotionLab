@@ -29,7 +29,7 @@ Ours-in paper | 0.223 | 0.0334 | 56.34 | 72.65 | 0.0273 | 64.97 | 47.86
 │   │   ├── motionflow.ckpt
 │   ├── clip-vit-large-patch14
 │   ├── glove
-│   ├── mdm-ldm
+│   ├── mcm-ldm
 │   │   ├── motion_encoder.ckpt
 │   │   ├── motionclip.pth.tar
 │   ├── smpl
