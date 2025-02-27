@@ -4,7 +4,7 @@
     <a href='https://arxiv.org/abs/2502.02358'><img src='https://img.shields.io/badge/arxiv-arxiv-red' alt='youtube video'></a>
     <a href='https://youtu.be/FbqCFCKGmT8'><img src='https://img.shields.io/badge/video-video-purple' alt='youtube video'></a>
     <a href='https://diouo.github.io/motionlab.github.io/'><img src='https://img.shields.io/badge/project-project-blue' alt='project page'></a>
-    <a href='https://huggingface.co/nielsr/motionlab'><img src='https://img.shields.io/badge/huggingface-huggingface-yellow' alt='project page'></a>
+    <a href='https://huggingface.co/nielsr/motionlab'><img src='https://img.shields.io/badge/hugging face-hugging face-yellow' alt='project page'></a>
 </p>
 
 The official code of MotionLab, whose core lies in ./rfmotion/models/modeltype/rfmotion.py.
