@@ -20,7 +20,7 @@ The official code of MotionLab, whose core lies in ./rfmotion/models/modeltype/r
 Method | text gen. (FID) | traj. gen. (avg. err.) | text edit (R@1) | traj. edit (R@1) | in-between (avg. err.) | style transfer (SRA) | style transfer (CRA)
 -------- | ----- | -----| -----| -----| -----| -----| -----
 Ours-specialist models | 0.209 | 0.0398 | 41.44 | 59.86 | 0.0371 | 67.55 | 43.53
-Ours-in paper | 0.223 | 0.0334 | 56.34 | 72.65 | 0.0273 | 64.97 | 47.86
+Ours-old | 0.223 | 0.0334 | 56.34 | 72.65 | 0.0273 | 64.97 | 47.86
 🔥🔥 Ours-new | 0.167 | 0.0334 | 56.34 | 72.65 | 0.0273 | 69.21 | 44.62
 
 ## Folder Structure
