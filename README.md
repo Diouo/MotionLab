@@ -1,4 +1,4 @@
-# [ICCV2025]MotionLab: Unified Human Motion Generation and Editing via the Motion-Condition-Motion Paradigm
+# [ICCV2025] MotionLab: Unified Human Motion Generation and Editing via the Motion-Condition-Motion Paradigm
 
 <p align="left">
     <a href='https://arxiv.org/abs/2502.02358'><img src='https://img.shields.io/badge/arxiv-arxiv-red' alt='youtube video'></a>
@@ -14,8 +14,8 @@ The official code of MotionLab, whose core lies in ./rfmotion/models/modeltype/r
 - [2025/01/23] release evaluating code
 - [2025/02/01] release codes of specialist models
 - [2025/02/03] release checkpoints
-- [2025/02/04] 🔥🔥 our unified model outperforms the our specialist models on all task metrics by modifying the CFG parameters
-- [2025/03/11] 🔥🔥 update the demo video to be more concise
+- [2025/02/04] our unified model outperforms the our specialist models on all task metrics by modifying the CFG parameters
+- [2025/03/11] update the demo video to be more concise
 - [2025/03/11] 🎉🎉 MotionLab has been accepted by ICCV2025
 
 ## Folder Structure
