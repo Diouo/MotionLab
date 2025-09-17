@@ -34,7 +34,7 @@ def all_collate(batch):
         "length": [b[5] for b in notnone_batches],
         "tokens": [b[6] for b in notnone_batches],
 
-        "edit_text": [b[2] for b in notnone_batches],
+        "edit_text": [b[7] for b in notnone_batches],
         "source_motion": collate_tensors([torch.tensor(b[8]).float() for b in notnone_batches]),
         "target_motion": collate_tensors([torch.tensor(b[9]).float() for b in notnone_batches]),
         "length_source": [b[10] for b in notnone_batches],
