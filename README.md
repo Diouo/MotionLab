@@ -14,9 +14,10 @@ The official code of MotionLab, whose core lies in ./rfmotion/models/modeltype/r
 - [2025/01/23] release evaluating code
 - [2025/02/01] release codes of specialist models
 - [2025/02/03] release checkpoints
-- [2025/02/04] our unified model outperforms the our specialist models on all task metrics by modifying the CFG parameters
+- [2025/02/04] Our unified model outperforms our specialist models on all task metrics by modifying the CFG parameters
 - [2025/03/11] update the demo video to be more concise
 - [2025/03/11] 🎉🎉 MotionLab has been accepted by ICCV2025
+- [2025/09/17] 🔥🔥 Some bugs are fixed. If you want to re-implement the experiment results, please use the code before Jun 26, 2025 
 
 ## Folder Structure
 ```
