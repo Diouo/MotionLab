@@ -80,6 +80,7 @@ python -m spacy download en_core_web_sm
 ### 2. Download Dependencies:
 The results should be placed as shown in Folder Structure, including glove, t2m, smpl and clip.
 ```
+conda install conda-forge::git-lfs
 bash prepare/download_smpl_model.sh
 bash prepare/download_smpl_file.sh
 bash prepare/download_glove.sh
@@ -99,6 +100,10 @@ The results should be placed as shown in Folder Structure, including [motion_enc
 
 ## Demo the MotionLab
 FFMPEG is necessary for exporting videos, otherwise only SMPL mesh can be exported.
+```
+conda install conda-forge::ffmpeg
+ffmpeg -version  # check!
+```
 
 You should first check the configure in ./configs/config_rfmotion.yam, to assign the checkpoint and task:
 
